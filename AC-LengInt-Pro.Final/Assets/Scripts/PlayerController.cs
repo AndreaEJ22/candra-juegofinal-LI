@@ -43,8 +43,8 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(0, h_mouse, 0);
         cam.transform.Rotate(-v_mouse, 0, 0);
 
-        h= Input.GetAxis("Horizontañ");
-        v= Input.GetAxis("Verical");
+        h= Input.GetAxis("Horizontal");
+        v= Input.GetAxis("Vertical");
 
         Vector3 direction = new Vector3(h, 0, v);
          if(Input.GetButton("Fire3"))
