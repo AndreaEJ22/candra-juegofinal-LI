@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
     {
 
         h_mouse = mouseHorizontal * Input.GetAxis("Mouse X");
-        v_mouse = mouseVertical * Input.GetAxis("Mouse X");
+        v_mouse = mouseVertical * Input.GetAxis("Mouse Y");
 
         transform.Rotate(0, h_mouse, 0);
         cam.transform.Rotate(-v_mouse, 0, 0);
@@ -47,10 +47,9 @@ public class PlayerController : MonoBehaviour
         v= Input.GetAxis("Vertical");
 
         Vector3 direction = new Vector3(h, 0, v);
-         if(Input.GetButton("Fire3"))
-        {
-            transform.Translate(direction * movespeed * Time.deltaTime);
-        }
+        
+        transform.Translate(direction * movespeed * Time.deltaTime);
+        
 
 
 
