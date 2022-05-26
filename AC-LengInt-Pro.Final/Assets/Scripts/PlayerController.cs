@@ -5,20 +5,57 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-      // Script de:
+    // Script de:
     // WASD movimiento de jugador, Flechas movimiento de la camara y Space salto 
     //  UnityInputSystem 
 
+    public float mouseHorizontal = 1f;
+    public float mouseVertical= 2f;
 
+    float h_mouse;
+    float v_mouse;
+
+    public float movespeed = 2;
+
+    public Camera cam;
+
+    float h;
+    float v;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Move();
+
     }
+
+    private void Move()
+    {
+
+        h_mouse = mouseHorizontal * Input.GetAxis("Mouse X");
+        v_mouse = mouseVertical * Input.GetAxis("Mouse X");
+
+        transform.Rotate(0, h_mouse, 0);
+        cam.transform.Rotate(-v_mouse, 0, 0);
+
+        h= Input.GetAxis("Horizontañ");
+        v= Input.GetAxis("Verical");
+
+        Vector3 direction = new Vector3(h, 0, v);
+         if(Input.GetButton("Fire3"))
+        {
+            transform.Translate(direction * movespeed * Time.deltaTime);
+        }
+
+
+
+    }
+    
+
+
 }
