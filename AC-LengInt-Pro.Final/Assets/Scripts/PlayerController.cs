@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
     // Script de:
     // WASD movimiento de jugador, Flechas movimiento de la camara y Space salto 
     //  UnityInputSystem 
