@@ -49,12 +49,7 @@ public class PlayerController : MonoBehaviour
         Vector3 direction = new Vector3(h, 0, v);
         
         transform.Translate(direction * movespeed * Time.deltaTime);
-        
-
-
 
     }
-    
-
 
 }
