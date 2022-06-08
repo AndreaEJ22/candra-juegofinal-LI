@@ -46,8 +46,9 @@ public class PlayerController : MonoBehaviour
         v= Input.GetAxis("Vertical");
 
         Vector3 direction = new Vector3(h, 0, v);
-        
-        transform.Translate(direction * movespeed * Time.deltaTime);
+
+        //transform.Translate(direction * movespeed * Time.deltaTime);
+        GetComponent<CharacterController>().SimpleMove(direction * movespeed * Time.deltaTime);
 
     }
 
